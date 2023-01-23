@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:opsz,wght@8..30,100;8..30,200;8..30,300;8..30,400;8..30,500;8..30,600;8..30,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Piazzolla', serif;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --main-bg : #1e272e;
+    --main-color : #0097e6;
+}
+
+html{
+     font-size: 62.5%;
+}
+
+body{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+}
+/*  main menu */
+.main_menu{
+    background-color: var(--main-bg);
+}
+.navbar{
+    color: #fff;
+    background-color: var(--main-bg);
+    padding: 1.5rem 0;
+}
+.navbar li{
+    margin-left: 20px;
+}
+.navbar a{
+    color: white;
+    font-size: 1.6rem;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+.navbar-toggler{
+    background-color: gray;
+}
+/*  rotate icons */
+.fa-snowflake{
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    color: var(--main-color);
+}
+/* animation ka liya prefix lagana key frame lagana padta ha padta ha */
+@keyframes rot{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(9deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/*  main header */
+.main_header_left{
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main_header_left p{
+   font-size: 1.5rem;
+}
+.main_header_left h1{
+    font-size: 2.7rem;
+    margin: 0rem 0rem 3rem 0rem;
+    text-transform: capitalize;
+}
+.main_header_left h1 span{
+  color: var(--main-color);  
+}
+.main_header_left .btn{
+   border: none;
+   cursor: pointer;
+   background-color: antiquewhite;
+   font-size: 1rem;
+   padding: 0.4rem 0.8rem;
+   border-radius: 1.5rem;
+   font-weight: 600;
+   text-transform: uppercase;
+   box-shadow: 0 8px 10px -6px #000;
+   outline: none;
+}
+.main_header_left .btn:hover{
+    box-shadow: 0 8px 10px -4px var(--main-color);
+}
+.main_header_right{
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main_header_right .ig{
+    /* width: 100% !important; */
+    height: 300px;
+    
+}
+
+.main_header_right figure img{
+ filter: drop-shadow(0 0 2rem rgba(0,0,0,0.5));
+}
+
+/* Weather page style */
+
+.temp_form{
+    width: 60%;
+    position: relative;
+    margin: 6rem auto 4rem;
+}
+.temp_form input[type="text"]{
+    width: 100%;
+    padding: 1rem 3rem 1rem 1.5rem;
+    background: #1e202b;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    border-radius: 2rem;
+}
+::placeholder{
+    color: #bfc1c8;
+}
+.temp_form input[type="submit"]{
+    position: absolute;
+    top:5px;
+    right: 5px;
+    bottom: 5px;
+    border: none;
+    background: #009ad8;
+    padding: 0 1rem;
+    border-radius: 3rem;
+    color: white;
+    font-weight: bold;
+}
+.temp_form input[type="submit"]:hover{
+    color: #009ad8;
+    background-color: #fff;
+}
+
+/* temp details show here */
+
+.tempInformation{
+    width: 35rem;
+    margin: auto;
+    min-height: 20rem;
+    background-color: #323544;
+    border-radius: 1rem;
+    /* padding: 1rem; */
+    font-family: "Roboto",sans-serif;
+}
+
+.top_layer{
+  width: 100%;
+  height: 20%;
+  background-color: #009ad8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.top_layer p{
+    color: #fff;
+    font-weight: 600;
+    padding: 1rem;
+    font-size: 13px;
+}
+
+.main_layer{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_layer #city_name{
+    padding: 1.5rem 0.9rem;
+    color: #bfc1c8;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.main_layer .middle_layer{
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.main_layer .middle_layer p,.main_layer .middle_layer .fa{
+  font-size: 5rem;
+  font-weight: 900;
+}
+.fa{
+    color: #009ad8;
+}
+sup{
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.data_hide{
+    visibility: hidden;
+    transition: all 0.6s linear;
+}
+
+
+
+
+
+/*  footer code */
+footer{
+     width: 100%;   
+     background-color: var(--main-bg);
+     margin-top: auto;
+}
+footer p{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    padding: 0.8rem 0;
+    line-height: 2.7rem;
+    font-size: 1.2rem;
+}
+
+/*  responsive code */
+@media (max-width:768px){
+    .main_header_left{
+        height: auto;
+        margin: 3rem 0;
+    }
+    .main_header_right{
+        height: auto;
+        margin-top: 3rem 0;
+    }
+    .temp_form{
+        width: auto;
+    }
+    .tempInformation{
+        width: auto;
+    }
+}

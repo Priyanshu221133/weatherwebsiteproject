@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headerLinks}}
+</head>
+<body>
+          <!--  nav-bar -->
+          {{>navbar}}
+
+          <!-- main header -->
+          <div class="container-fluid main_header">
+               <!--  row -->
+               <div class="row">
+                   <!--  column -->
+                   <div class="col-md-10 col-12 mx-auto">
+                     
+                    <!--  one part left and right -->
+                     <div class="row">
+
+                        
+                        <div class="col-md-10 col-12 main_header_left align-items-center">
+                            <figure id="fig">                                 <!-- It always be remains responsive   -->
+                               <img src="images/404.jpg" alt="priyanshu" class="img-fluid" title="priyanshu" height="400px" width="200px">
+                           </figure>
+                    
+                            <p>Welcome to Thapa Techinical World</p>
+                            <h1>{{errorMessage}}</h1>
+                            <!-- button -->
+                            <a href="/" ><button class="btn">Go Back</button></a>
+                        </div>
+                        
+                     </div>
+                    
+                   </div>
+               </div>
+          </div>
+
+        <!--  footer -->
+        {{>footer}}
+</body>
+</html>

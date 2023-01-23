@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headerLinks}}
+</head>
+<body>
+          <!--  nav-bar -->
+          {{>navbar}}
+
+          <!-- main header -->
+          <div class="container-fluid main_header">
+               <!--  row -->
+               <div class="row">
+                   <!--  column -->
+                   <div class="col-md-10 col-12 mx-auto ">
+                    
+                    {{!--  search bar --}}
+                    <div class="main_content">
+                        <form class="temp_form"> <!-- Id is important for feaching data from Weather API-->
+                            <input type="text" id="cityName" placeholder="Enter your city name" autocomplete="off">
+                            <input type="submit" value="Search" id="submitBtn">
+                        </form>
+                    </div>
+                    
+                    {{!-- Showing Weather Temperature  --}}
+                    <div class="tempInformation">
+                        {{!--  top layer --}}
+                        <div class="top_layer">
+                            <p id="day">Wednesday</p>
+                            <p id="today_date">4 JAN</p>
+                        </div>      
+                        {{!-- Down Layer --}}
+                        <div class="main_layer">
+                            <p id="city_name">Get Output Here</p>
+                            <div class="middle_layer data_hide">
+                                <p id="temp"><span id="temp_real_val">0</span><sup>o</sup>C</p>
+                                <p id="temp_status"><i class="fa fa-cloud"></i></p>
+                            </div>
+                        </div>
+                    </div>
+
+                   </div>
+               </div>
+          </div>
+
+        <!--  footer -->
+        {{>footer}}
+
+        {{!--  javaScript --}}
+        <script src="js/main.js" defer></script>
+</body>
+</html>
